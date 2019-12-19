@@ -9,7 +9,7 @@ app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 
 //new
-app.engine('pug', require('pug').__express)
+//app.engine('pug', require('pug').__express)
 
 app.get('/', (req, res) => {
   res.render('index', {
@@ -30,7 +30,7 @@ app.get('/courses', (req, res) => {
 // const server = app.listen(7000, () => {
 //   console.log(`Express running → PORT ${server.address().port}`);
 // 
-const server = app.listen(process.env.PORT, () => {
+const server = app.listen(7000, () => {
   console.log(`Express running → PORT ${server.address().port}`);
 });
 
