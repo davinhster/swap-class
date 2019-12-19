@@ -8,6 +8,8 @@ app.set('view engine', 'pug');
 // serve static files from the 'public folder'
 app.use(express.static(__dirname + '/public'));
 
+app.set('port', process.env.PORT || 7000)
+
 //new
 //app.engine('pug', require('pug').__express)
 
