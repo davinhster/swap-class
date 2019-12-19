@@ -8,6 +8,9 @@ app.set('view engine', 'pug');
 // serve static files from the 'public folder'
 app.use(express.static(__dirname + '/public'));
 
+//new
+app.engine('pug', require('pug').__express)
+
 app.get('/', (req, res) => {
   res.render('index', {
     title: 'SJSU Class Enrollment',
@@ -30,3 +33,4 @@ app.get('/courses', (req, res) => {
 const server = app.listen(process.env.PORT, () => {
   console.log(`Express running → PORT ${server.address().port}`);
 });
+
